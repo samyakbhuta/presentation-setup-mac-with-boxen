@@ -97,7 +97,7 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
 * For Github username and password
 
 ### Installation will take time
-
+* There will be lot of the things that will be downloaded. Have a coffee !
 
 ### We need to update our shell config
 
@@ -106,3 +106,35 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
 ```
 [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 ```
+
+### Customize your environment
+
+* We will start by putting more brew packages that we think we need.
+* Let's start with ```cowsay``` command line tool.
+* With Brew, it would be install with command ```brew install cowsay```.
+
+### Customize your environment - 2
+* In case of Boxen, we will still fetch the command using brew package system.
+* But, we will not do it manually, and just ask Boxen to do this bit for us.
+
+
+### Adding more brew packages
+* Open the file ```site.pp``` in ```repo/manifests``` folder.
+* Find following bit of code
+```
+  # common, useful packages
+  package {
+    [
+      'ack',
+      'findutils',
+      'gnu-tar'
+    ]:
+  }
+
+```
+* Add ```cowsay``` as additional package in the array list.
+
+### Install it using Boxen
+* Now, just go to commnad line and type the command ```boxen```
+* It will install the ```cowsay``` package
+* Test it with ```cowsay 'Hello World'```
