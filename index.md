@@ -27,3 +27,37 @@ The objective of this slide is to make sure audience understands why tooling is 
 ### Benefits
 
 * Eventhough discussing each feature will imply discussing the benefits as well. A nice *list* of benefits will help us reinforce the idea and let them really root for it. Also, setting the charge and the pace and keep them interested for the entire presentation.
+
+### Underlying Opinion
+
+> We believe that development is production, so we value consistency, predictability, and reproducibility over artisanal, hand-tweaked development environments.
+
+###  Community
+
+* Lots of [third party modules](https://github.com/boxen)
+* Create your own modules and extend
+
+### You know Puppet ?
+
+* Boxen uses [Puppet](https://puppetlabs.com/)
+
+
+### Let's start it
+
+* Create a project manifest. Run a command. That's it.
+
+### Checklist
+
+* TODO : Make sure the pre-requisites of installing boxen are met.
+```
+Boxen only works on Macs
+Boxen requires the Xcode Command Line Tools to be installed.
+Boxen will not work with an existing rvm install.
+Boxen may not play nice with a GitHub username that includes a dash(-)
+Boxen may not play nice with an existing rbenv install.
+Boxen may not play nice with an existing chruby install.
+Boxen may not play nice with an existing homebrew install.
+Boxen may not play nice with an existing nvm install.
+Boxen recommends installing full Xcode.
+```
+
