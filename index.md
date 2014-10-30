@@ -61,3 +61,39 @@ Boxen may not play nice with an existing nvm install.
 Boxen recommends installing full Xcode.
 ```
 
+
+### Create a new git repo
+
+* You can fork, but then you might want to have this all private.
+
+
+### Perform following steps : Boostraping Steps
+
+```
+sudo mkdir -p /opt/boxen
+sudo chown ${USER}:staff /opt/boxen
+git clone https://github.com/boxen/our-boxen /opt/boxen/repo
+cd /opt/boxen/repo
+git remote rm origin
+git remote add origin <the location of my new git repository>
+git push -u origin master
+```
+
+### Installing the Configuration
+
+```
+cd /opt/boxen/repo
+./script/boxen
+```
+
+In case you don't want to have your harddrive in Full Encryption Mode, follow the last command with an option.
+
+```
+./script/boxen --no-fde
+```
+
+### Will Prompt for
+* For installing ```bundler```
+* For Github username and password
+
+### Installation will take time
