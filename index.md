@@ -97,3 +97,12 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
 * For Github username and password
 
 ### Installation will take time
+
+
+### We need to update our shell config
+
+* Update ```~/.bashrc``` or ```~/.zshrc``` or ```~/.profile``` with ...
+
+```
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+```
