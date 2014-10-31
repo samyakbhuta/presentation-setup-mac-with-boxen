@@ -159,3 +159,8 @@ node default {
 	include chrome
 }
 ```
+
+
+### Sharing your boxen setup with others
+* You can make it public and other can just start with your repo
+* Use [boxen-web](https://github.com/boxen/boxen-web) to allow access to your boxen setup over the web
