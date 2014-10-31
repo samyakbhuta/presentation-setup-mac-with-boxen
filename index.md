@@ -19,6 +19,11 @@ The objective of this slide is to make sure audience understands why tooling is 
 
 [https://boxen.github.com](https://boxen.github.com)
 
+###
+
+> Boxen is basically a customised-for-Mac wrapper round the provisioning tool Puppet
+[http://cookieshq.co.uk/posts/adventures-with-boxen/](http://cookieshq.co.uk/posts/adventures-with-boxen/)
+
 ### Why we need it ?
 
 * List features as told by Boxen's own homepage.
@@ -40,6 +45,7 @@ The objective of this slide is to make sure audience understands why tooling is 
 ### You know Puppet ?
 
 * Boxen uses [Puppet](https://puppetlabs.com/)
+* Benefit withPuppet is that all its changes are idempotent, and so unlike a shell script, stuff shouldn't break if you re-run it!
 
 
 ### Let's start it
