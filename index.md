@@ -144,3 +144,18 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
 * Now, just go to commnad line and type the command ```boxen```
 * It will install the ```cowsay``` package
 * Test it with ```cowsay 'Hello World'```
+
+
+### Let's also install Google Chrome
+* Add ```github "chrome",  "1.2.0"```` at the end of ```Puppetfile```.
+* Add ```include chrome``` at ```site.pp``` file. The file will be something like following.
+
+```
+node default {
+	# ...
+	# other code
+	# ...
+
+	include chrome
+}
+```
