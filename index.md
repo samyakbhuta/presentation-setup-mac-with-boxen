@@ -160,6 +160,31 @@ node default {
 }
 ```
 
+### Why not also install iTerm?
+* Add ```github "iterm2",  "1.2.0"``` at the end of ```Puppetfile```.
+* Add ```include iterm2::stable``` at ```site.pp``` file. The file will be something like following.
+
+```
+node default {
+  # ...
+  # other code
+  # ...
+
+  include iterm2::stable
+}
+```
+
+### But, what about my favorite color scheme ?
+* Boxen is not all about putting binary executables. It has much more wider scope.
+* Here, we will also install few color schemes that boxen provides us.
+* Update ```site.pp``` file with following code snippet. Put it right after, ```include iterm2::stable```.
+
+```
+include iterm2::colors::arthur
+include iterm2::colors::saturn
+include iterm2::colors::solarized_light
+include iterm2::colors::solarized_dark
+```
 
 ### Adding Personal Taste
 * TODO
