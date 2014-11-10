@@ -186,8 +186,37 @@ include iterm2::colors::solarized_light
 include iterm2::colors::solarized_dark
 ```
 
-### Adding Personal Taste
-* TODO
+### Adding Personal Taste - 1
+* Create a manifest file that lists things that you want.
+```
+touch  modules/people/manifests/<your_github_id>.pp
+```
+* Copy following code
+```
+class people::samyakbhuta {
+  include emacs   # requires emacs module in Puppetfile
+}
+```
+* This will install emacs on your system.
+
+### Adding Personal Taste - 2
+* Let's also have our personal repo cloned, and in folder we want.
+* Add following code.
+```
+  $home     = "/Users/${::boxen_user}"
+  $forksdir = "${home}/Forks"
+  $repo_name = "${forksdir}/<repo_name>"
+
+  file { $forksdir:
+    ensure  => directory
+  }
+
+  repository { $repo_name:
+    source  => '<your_github_id>/<repo_name>',
+    require => File[$forksdir]
+  }
+```
+* Run ```boxen```.
 
 
 ### Adding Projects
