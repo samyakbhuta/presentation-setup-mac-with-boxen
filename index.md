@@ -186,6 +186,25 @@ include iterm2::colors::solarized_light
 include iterm2::colors::solarized_dark
 ```
 
+### How about adding node modules ?
+* Boxen allows you to install node modules for each version of node.
+* Let's add coffeescript module (globally!) in our system.
+* Let's us also add yeoman command line tool.
+* Update ```site.pp``` file with following code snippet.
+
+```
+  # Node.js Modules
+  $nodejs_modules = [
+    'coffee-script',
+    'yo'
+  ]
+
+  nodejs::module { $nodejs_modules :
+    node_version => 'v0.10',
+  }
+
+```
+
 ### Adding Personal Taste - 1
 * Create a manifest file that lists things that you want.
 ```
