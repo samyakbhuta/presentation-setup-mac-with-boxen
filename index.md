@@ -241,6 +241,8 @@ class people::samyakbhuta {
 ### Adding Projects
 * TODO
 
+### Pretedning Boxen
+* ```boxen --pretend```
 
 ### Sharing your boxen setup with others
 * You can make it public and other can just start with your repo
