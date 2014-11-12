@@ -123,9 +123,9 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
 
 * Update ```~/.bashrc``` or ```~/.zshrc``` or ```~/.profile``` with ...
 
-```
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
-```
+  ```
+  [ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+  ```
 
 
 
@@ -145,7 +145,7 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
 * Open the file ```site.pp``` in ```repo/manifests``` folder.
 * Find following bit of code
 
-```
+  ```
   # common, useful packages
   package {
     [
@@ -155,7 +155,7 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
     ]:
   }
 
-```
+  ```
 * Add ```cowsay``` as additional package in the array list.
 
 
@@ -169,30 +169,30 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
 * Add ```github "chrome",  "1.2.0"```` at the end of ```Puppetfile```.
 * Add ```include chrome``` at ```site.pp``` file. The file will be something like following.
 
-```
-node default {
-	# ...
-	# other code
-	# ...
+  ```
+  node default {
+    # ...
+    # other code
+    # ...
 
-	include chrome
-}
-```
+    include chrome
+  }
+  ```
 
 
 ### Why not also install iTerm?
 * Add ```github "iterm2",  "1.2.0"``` at the end of ```Puppetfile```.
 * Add ```include iterm2::stable``` at ```site.pp``` file. The file will be something like following.
 
-```
-node default {
-  # ...
-  # other code
-  # ...
+  ```
+  node default {
+    # ...
+    # other code
+    # ...
 
-  include iterm2::stable
-}
-```
+    include iterm2::stable
+  }
+  ```
 
 
 ### But, what about my favorite color scheme ?
@@ -200,12 +200,12 @@ node default {
 * Here, we will also install few color schemes that boxen provides us.
 * Update ```site.pp``` file with following code snippet. Put it right after, ```include iterm2::stable```.
 
-```
-include iterm2::colors::arthur
-include iterm2::colors::saturn
-include iterm2::colors::solarized_light
-include iterm2::colors::solarized_dark
-```
+  ```
+  include iterm2::colors::arthur
+  include iterm2::colors::saturn
+  include iterm2::colors::solarized_light
+  include iterm2::colors::solarized_dark
+  ```
 
 
 ### How about adding node modules ?
@@ -214,7 +214,7 @@ include iterm2::colors::solarized_dark
 * Let's us also add yeoman command line tool.
 * Update ```site.pp``` file with following code snippet.
 
-```
+  ```
   # Node.js Modules
   $nodejs_modules = [
     'coffee-script',
@@ -225,28 +225,28 @@ include iterm2::colors::solarized_dark
     node_version => 'v0.10',
   }
 
-```
+  ```
 
 
 
 ### Adding Personal Taste - 1
 * Create a manifest file that lists things that you want.
-```
-touch  modules/people/manifests/<your_github_id>.pp
-```
+  ```
+  touch  modules/people/manifests/<your_github_id>.pp
+  ```
 * Copy following code
-```
-class people::samyakbhuta {
-  include emacs   # requires emacs module in Puppetfile
-}
-```
+  ```
+  class people::samyakbhuta {
+    include emacs   # requires emacs module in Puppetfile
+  }
+  ```
 * This will install emacs on your system.
 
 
 ### Adding Personal Taste - 2
 * Let's also have our personal repo cloned, and in folder we want.
 * Add following code.
-```
+  ```
   $home     = "/Users/${::boxen_user}"
   $forksdir = "${home}/Forks"
   $repo_name = "${forksdir}/<repo_name>"
@@ -259,7 +259,7 @@ class people::samyakbhuta {
     source  => '<your_github_id>/<repo_name>',
     require => File[$forksdir]
   }
-```
+  ```
 * Run ```boxen```.
 
 
