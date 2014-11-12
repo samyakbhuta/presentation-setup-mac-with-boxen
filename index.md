@@ -25,6 +25,7 @@ The objective of this slide is to make sure audience understands why tooling is 
 ### It is just puppetry!
 
 > Boxen is basically a customised-for-Mac wrapper round the provisioning tool Puppet
+
 [http://cookieshq.co.uk/posts/adventures-with-boxen/](http://cookieshq.co.uk/posts/adventures-with-boxen/)
 
 
