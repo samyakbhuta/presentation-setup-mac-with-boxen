@@ -83,7 +83,7 @@ Boxen recommends installing full Xcode.
 * You can fork, but then you might want to have this all private.
 
 
-### Perform following steps : Boostraping Steps
+### Perform following steps : Bootstrapping Steps
 
 ```
 sudo mkdir -p /opt/boxen
