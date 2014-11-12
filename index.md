@@ -237,7 +237,7 @@ In case you don't want to have your harddrive in Full Encryption Mode, follow th
   ```
 * Copy following code
   ```
-  class people::samyakbhuta {
+  class people::<your_github_id> {
     include emacs   # requires emacs module in Puppetfile
   }
   ```
